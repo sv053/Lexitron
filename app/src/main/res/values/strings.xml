@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lexitron</string>
+    <string name="input_words">login</string>
+    <string name="apply">find</string>
+</resources>
