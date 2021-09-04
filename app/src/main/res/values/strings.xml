@@ -2,4 +2,5 @@
     <string name="app_name">Lexitron</string>
     <string name="input_words">login</string>
     <string name="apply">find</string>
+    <string name="showAll">показать всех</string>
 </resources>

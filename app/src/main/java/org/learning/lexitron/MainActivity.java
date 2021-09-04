@@ -9,11 +9,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import org.learning.lexitron.model.User;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Response;
@@ -22,6 +27,7 @@ import retrofit2.Callback;
 public class MainActivity extends AppCompatActivity {
 
     String login;
+    static List<String> names;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         EditText userLoginInput = (EditText) findViewById(R.id.loginInput);
 
 
+        downloadAllUsers();
         userLoginInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -80,5 +87,35 @@ public class MainActivity extends AppCompatActivity {
             }
         });
      //   }
+    }
+
+    private void downloadAllUsers(){
+        NetworkService.getInstance()
+                .getJSONApi()
+                .getAllUsers()
+                .enqueue(new Callback<List<User>>() {
+                    @Override
+                    public void onResponse(Call<List<User>> call, Response<List<User>> response) {
+                        List<User> users = response.body();
+                        names = new ArrayList<>();
+                        for(User u: users)
+                            names.add(u.getName());
+
+                        ListView usersList = (ListView) findViewById(R.id.allUsersListView);
+
+                        ArrayAdapter<String> adapter = new ArrayAdapter(MainActivity.this,
+                                android.R.layout.simple_list_item_1, names);
+
+                        usersList.setAdapter(adapter);
+                    }
+
+                    @Override
+                    public void onFailure(Call<List<User>> call, Throwable t) {
+                     //   textView.append("Error occurred while getting request!");
+                        t.printStackTrace();
+                    }
+
+
+                });
     }
 }
