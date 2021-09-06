@@ -16,7 +16,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import org.learning.lexitron.model.User;
+import org.learning.lexitron.service.FileReader;
+import org.learning.lexitron.service.FileWriter;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,6 +39,21 @@ public class MainActivity extends AppCompatActivity {
         final TextView textView = (TextView) findViewById(R.id.textView);
         Button findBtn = (Button) findViewById(R.id.findUserBtn);
         EditText userLoginInput = (EditText) findViewById(R.id.loginInput);
+
+        FileWriter fw = new FileWriter(this);
+        try {
+            String s = fw.WriteFile().get(0);
+            textView.append(s);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            textView.append(loadText("C:\\Users\\admin\\AndroidStudioProjects\\Lexitron\\words.txt").toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
         downloadAllUsers();
@@ -101,12 +119,15 @@ public class MainActivity extends AppCompatActivity {
                         for(User u: users)
                             names.add(u.getName());
 
+
                         ListView usersList = (ListView) findViewById(R.id.allUsersListView);
 
                         ArrayAdapter<String> adapter = new ArrayAdapter(MainActivity.this,
                                 android.R.layout.simple_list_item_1, names);
 
                         usersList.setAdapter(adapter);
+
+
                     }
 
                     @Override
@@ -117,5 +138,11 @@ public class MainActivity extends AppCompatActivity {
 
 
                 });
+    }
+
+    private  List<String> loadText(String s) throws IOException {
+
+
+    return new FileReader(this,s).ReadFile();
     }
 }
