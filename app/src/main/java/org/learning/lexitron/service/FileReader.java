@@ -27,16 +27,19 @@ public class FileReader {
 
     public List<String> ReadFile() throws IOException {
 
-        String str;
+        String str = "";
         try {
             // открываем поток для чтения
             BufferedReader br = new BufferedReader(new InputStreamReader(context.openFileInput(FILEPATH)));
             // читаем содержимое
             str = br.readLine();
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+            str = e.toString();
         } catch (IOException e) {
             e.printStackTrace();
+            str = e.toString();
         }
 //    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 //    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
@@ -74,6 +77,7 @@ public class FileReader {
 ////        }
 
 //        }
+        contentFromFile.add(str);
         return contentFromFile;
     }
 }

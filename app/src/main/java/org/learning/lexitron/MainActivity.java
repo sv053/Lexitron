@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         try {
-            textView.append(loadText("C:\\Users\\admin\\AndroidStudioProjects\\Lexitron\\words.txt").toString());
+//            textView.append(loadText("C:\\Users\\admin\\AndroidStudioProjects\\Lexitron\\words.txt").toString());
+            textView.append(loadText("failik.txt").toString());
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -140,9 +141,13 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    private  List<String> loadText(String s) throws IOException {
+    private  String loadText(String s) throws IOException {
 
+        List<String> resText = new FileReader(this,s).ReadFile();
+        String theOneStr = "";
+        for (String str : resText)
+            theOneStr += str;
 
-    return new FileReader(this,s).ReadFile();
+            return theOneStr;
     }
 }

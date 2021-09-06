@@ -57,7 +57,7 @@ public class FileWriter {
 //        return null;
 //        //  }
 //----------------------------------------------------
-        String text1 = "textBox.getText().toString()";
+        String text1 = "this string is from file ";
 //        FileOutputStream fos1 = null;
 //        try {
 //            //  EditText textBox = (EditText) findViewById(R.id.editor);
