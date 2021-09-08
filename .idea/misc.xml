@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/button_darkblue_pressed_bluegray.xml" value="0.1824074074074074" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_btn_stroke_darkblue.xml" value="0.1824074074074074" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_btn_stroke_pressed_bluegray.xml" value="0.1824074074074074" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_main.xml" value="0.152" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_main_ex.xml" value="0.1" />
       </map>
     </option>
   </component>

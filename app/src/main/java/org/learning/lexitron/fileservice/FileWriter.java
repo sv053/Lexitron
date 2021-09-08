@@ -1,17 +1,11 @@
-package org.learning.lexitron.service;
-
-import static android.content.Context.MODE_PRIVATE;
+package org.learning.lexitron.fileservice;
 
 import android.content.Context;
-import android.widget.Toast;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
