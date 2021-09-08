@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"
+        android:gravity="start"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Welcome!"/>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="80dp"
+           android:gravity="center">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/findUserBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/showAll"
+                android:layout_gravity="bottom"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="@drawable/button_darkblue_pressed_bluegray"/>
+    </LinearLayout>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/allUsersListView"/>
+    </LinearLayout>
+</RelativeLayout>
