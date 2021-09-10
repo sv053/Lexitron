@@ -100,7 +100,7 @@ public class MainActivity_ex extends AppCompatActivity {
 
     private void downloadAllUsers(){
         NetworkService.getInstance()
-                .getJSONApi()
+                .getUsersJSONApi()
                 .getAllUsers()
                 .enqueue(new Callback<List<User>>() {
                     @Override

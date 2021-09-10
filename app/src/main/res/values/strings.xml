@@ -3,4 +3,5 @@
     <string name="input_words">login</string>
     <string name="apply">find</string>
     <string name="showAll">показать всех</string>
+    <string name="choosetext">выбрать текст</string>
 </resources>

@@ -32,8 +32,11 @@ public class NetworkService {
         return mInstance;
     }
 
-    public ApiService getJSONApi() {
-        return mRetrofit.create(ApiService.class);
+    public UsersApiService getUsersJSONApi() {
+        return mRetrofit.create(UsersApiService.class);
     }
 
+    public TextsApiService getTextsJSONApi() {
+        return mRetrofit.create(TextsApiService.class);
+    }
 }

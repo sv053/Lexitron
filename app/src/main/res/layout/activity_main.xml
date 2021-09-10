@@ -10,56 +10,80 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="20dp"
-        android:gravity="start"
         android:orientation="vertical"
         >
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:orientation="vertical">
+<!--        -->
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical">-->
 
-        <WebView
-            android:layout_width="250dp"
-            android:layout_height="150dp"
-            android:id="@+id/webView"/>
-        <ScrollView
-            android:layout_width="250dp"
-            android:layout_height="150dp">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/dataFromDict"
-            android:background="@color/lightblue"/>
-        </ScrollView>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <EditText
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:id="@+id/quieryEt"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:text="load"
-            android:id="@+id/loadFromDictBtn"/>
-        </LinearLayout>
-    </LinearLayout>
+<!--&lt;!&ndash;        <WebView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="250dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="150dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/webView"/>&ndash;&gt;-->
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"> </ScrollView>-->
+<!--            <EditText-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:id="@+id/inputText"-->
+<!--                android:background="@color/lightblue"-->
+<!--                android:hint="put smth"/>-->
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:id="@+id/loadSavedTextTv"-->
+<!--            android:background="@color/lightblue1"-->
+<!--            android:textIsSelectable="true"-->
+<!--            />-->
+<!--            <androidx.appcompat.widget.AppCompatButton-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/chooseTextBtn"-->
+<!--                android:text="choose text"-->
+<!--                android:enabled="false"-->
+<!--                />-->
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/dataFromDict"-->
+<!--            android:background="@color/lightblue1"/>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+<!--            <EditText-->
+<!--                android:layout_width="250dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:id="@+id/quieryEt"-->
+<!--                android:hint="search word..."/>-->
+<!--        <Button-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="5dp"-->
+<!--            android:text="load"-->
+<!--            android:id="@+id/loadFromDictBtn"/>-->
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+<!--        -->
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Welcome!"/>
 
-
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/gonext"/>
        <LinearLayout
            android:layout_width="match_parent"
-           android:layout_height="80dp"
+           android:layout_height="wrap_content"
            android:gravity="center">
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/findUserBtn"
@@ -67,8 +91,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/showAll"
                 android:layout_gravity="bottom"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:background="@drawable/button_darkblue_pressed_bluegray"/>

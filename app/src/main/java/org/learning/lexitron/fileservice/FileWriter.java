@@ -17,7 +17,7 @@ public class FileWriter {
         this.context = context;
 
     }
-    public List<String> WriteFile() throws IOException {
+    public List<String> WriteFile(String str) throws IOException {
 
 
 
@@ -51,7 +51,7 @@ public class FileWriter {
 //        return null;
 //        //  }
 //----------------------------------------------------
-        String text1 = "this string is from file ";
+    //    String text1 = "this string is from file ";
 //        FileOutputStream fos1 = null;
 //        try {
 //            //  EditText textBox = (EditText) findViewById(R.id.editor);
@@ -73,7 +73,7 @@ public class FileWriter {
 
         try {
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(context.openFileOutput(FILENAME, Context.MODE_PRIVATE)));
-            bw.write(text1);
+            bw.write(str);
             bw.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();

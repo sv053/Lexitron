@@ -1,5 +1,6 @@
 package org.learning.lexitron;
 
+import org.learning.lexitron.model.Text;
 import org.learning.lexitron.model.User;
 
 import java.util.List;
@@ -9,16 +10,16 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
-public interface ApiService {
+public interface TextsApiService {
 
 //    @GET("/users/{id}")
 //    public Call<User> getPostWithID(@Path("id") int id);
 
-    @GET("/users/findAll")
-    public retrofit2.Call<List<User>> getAllUsers();
+    @GET("/texts/findAllTexts")
+    public retrofit2.Call<List<Text>> getAllTexts();
 
-    @GET("/users/findByLogin")
-    public retrofit2.Call<User> getUserWithLogin(@Query("login") String login);
+    @GET("/texts/findByTitle")
+    public retrofit2.Call<Text> getTextByTitle(@Query("title") String title);
 
 //    @GET("/users")
 //    public Call<List<User>> getUserById(@Query("userId") int id);
@@ -26,6 +27,6 @@ public interface ApiService {
 //    @POST("/users")
 //    public Call<User> postData(@Body User data);
 
-    @POST("/users")
-    public retrofit2.Call<User> chooseUser(@Body String data);
+    @POST("/texts")
+    public retrofit2.Call<User> chooseText(@Body String data);
 }
