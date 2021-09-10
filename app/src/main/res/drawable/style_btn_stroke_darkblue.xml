@@ -2,7 +2,7 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <stroke android:width="2dp" android:color="@color/deepdarkblue"/>
     <corners android:radius="10dp"/>
-    <solid android:color="@color/winblue"/>
+    <solid android:color="@color/deepdarkblue"/>
 
 <!--    <gradient android:type="radial" android:gradientRadius="@dimen/cardview_default_radius" android:centerColor="@color/lightblue1"/>-->
 </shape>

@@ -26,7 +26,10 @@ import org.learning.lexitron.fileservice.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
 
 public class ChoosetextActivity extends AppCompatActivity {
 
@@ -34,6 +37,7 @@ public class ChoosetextActivity extends AppCompatActivity {
     private List<Button> buttonList = new ArrayList<Button>();
     private FlexboxLayout layout;
     private TextView dictResult;
+    private Map<String,String> dictionary;
 
  //   private static int btnId = 0;
 
@@ -44,6 +48,7 @@ public class ChoosetextActivity extends AppCompatActivity {
 
         layout = (FlexboxLayout) findViewById(R.id.btnLayout);
         dictResult = (TextView) findViewById(R.id.dataFromDict);
+        dictionary = new HashMap<>();
 
      //   TextView choosenTextView = (TextView) findViewById(R.id.loadSavedTextTv);
         //  final TextView textView = (TextView) findViewById(R.id.textView);
@@ -160,7 +165,7 @@ public class ChoosetextActivity extends AppCompatActivity {
         Button button = new Button(this);  // создаём новый Button
         button.setId(buttonList.size());  //  Устанавливаем id (индекс в списке)
         button.setText(s);
-        button.setPadding(5,0,5,0);
+        button.setPadding(10,0,10,0);
         button.setBackgroundResource(R.drawable.button_white_pressed_lightblue);
         button.setOnClickListener(new View.OnClickListener() {  // Устанавливаем слушателя
             @Override
@@ -170,9 +175,19 @@ public class ChoosetextActivity extends AppCompatActivity {
              //   button.setText("Нажата кнопка №" + (position + 1));  // Как-нибудь это обрабатываем
 
                 //translate
-                translateWord(button.getText().toString());
+                String wordToTranslate = button.getText().toString();
 
                 //translate ends
+
+                if(!dictionary.keySet().contains(wordToTranslate)){
+                    dictionary.put(wordToTranslate, translateWord(wordToTranslate));
+
+                }
+                else {
+                    dictionary.remove(button.getText(),wordToTranslate);
+                    button.setBackgroundResource(R.drawable.button_white_pressed_lightblue);
+                }
+
             }
         });
         buttonList.add(button);  //  Добавляем в список
@@ -196,18 +211,19 @@ public class ChoosetextActivity extends AppCompatActivity {
 
     }
 
-    private void translateWord(String word){
+    private String translateWord(String word){
         dictResult.setText("Загрузка...");
+        final String[] translatedText = new String[1];
         new Thread(new Runnable() {
             public void run() {
                 try {
                     String content = getContent("https://dle.rae.es/", word);
                     String cleanString = content.substring(content.indexOf("description"));
                     content = cleanString.substring(cleanString.indexOf("1"), cleanString.indexOf(".\">"));
-                    String finalContent = content;
+                    translatedText[0] = content;
                     dictResult.post(new Runnable() {
                         public void run() {
-                            dictResult.setText(finalContent);
+                            dictResult.setText(translatedText[0]);
                         }
                     });
                 } catch (IOException ex) {
@@ -228,6 +244,7 @@ public class ChoosetextActivity extends AppCompatActivity {
                 }
             }
         }).start();
+        return translatedText[0];
     }
 
 }

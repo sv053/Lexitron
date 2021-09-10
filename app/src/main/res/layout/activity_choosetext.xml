@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".ChoosetextActivity">
 
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +32,7 @@
         <EditText
             android:id="@+id/inputText"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
             android:background="@drawable/style_roundcorners_ligtblue"
             android:hint="скопируйте текст в это окно"
             android:padding="10dp"
@@ -42,7 +44,7 @@
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp">
+            android:layout_marginBottom="10dp">
 <!--            <TextView-->
 <!--                android:layout_width="190dp"-->
 <!--                android:layout_height="30dp"-->
@@ -61,7 +63,7 @@
                 android:background="@drawable/button_darkblue_pressed_bluegray"
                 android:enabled="false"
                 android:textAlignment="center"
-                android:textColor="@color/lightblue1"
+                android:textColor="@color/white"
                 android:text="загрузить" />
 
         </LinearLayout>
@@ -87,13 +89,13 @@
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp">
+        >
     <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/dataFromDict"
     android:background="@drawable/style_roundcorners_ligtblue"
-        />
+     android:padding="10dp"   />
     </ScrollView>
 </LinearLayout>
         <ScrollView
@@ -114,5 +116,5 @@
 </com.google.android.flexbox.FlexboxLayout>
     </ScrollView>
     </LinearLayout>
-
+</ScrollView>
 </RelativeLayout>
