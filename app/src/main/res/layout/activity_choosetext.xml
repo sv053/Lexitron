@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/mainLayout">
+        android:id="@+id/mainLayout"
+        android:layout_margin="12dp">
 
         <!--        <WebView-->
         <!--            android:layout_width="250dp"-->
@@ -21,73 +22,84 @@
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_marginBottom="4dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
         <EditText
             android:id="@+id/inputText"
             android:layout_width="match_parent"
-            android:layout_height="210dp"
-            android:background="@color/lightblue"
-            android:hint="put smth" />
-
-
-
+            android:layout_height="250dp"
+            android:background="@drawable/style_roundcorners_ligtblue"
+            android:hint="скопируйте текст в это окно"
+            android:padding="10dp"
+            />
+    </ScrollView>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="190dp"
-                android:layout_height="30dp"
-                android:id="@+id/loadSavedTextTv"
-                android:background="@color/lightblue1"
-                android:textIsSelectable="true"
-                android:hint="сохранённый файл"
-                android:layout_margin="10dp"
-                />
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp">
+<!--            <TextView-->
+<!--                android:layout_width="190dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:id="@+id/loadSavedTextTv"-->
+<!--                android:background="@color/lightblue1"-->
+<!--                android:textIsSelectable="true"-->
+<!--                android:hint="сохранённый файл"-->
+<!--                android:layout_margin="10dp"-->
+<!--                />-->
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/saveTextBtn"
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:layout_margin="10dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:background="@drawable/button_darkblue_pressed_bluegray"
                 android:enabled="false"
-                android:gravity="center_horizontal"
+                android:textAlignment="center"
+                android:textColor="@color/lightblue1"
                 android:text="загрузить" />
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/lightblue1">
-            <EditText
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:id="@+id/quieryEt"
-                android:hint="search word..."/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="load"
-                android:id="@+id/loadFromDictBtn"/>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="@color/lightblue1">-->
+<!--            <EditText-->
+<!--                android:layout_width="250dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:id="@+id/quieryEt"-->
+<!--                android:hint="search word..."/>-->
+<!--            <Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:text="load"-->
+<!--                android:id="@+id/loadFromDictBtn"/>-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
     <ScrollView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
     <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/dataFromDict"
-    android:background="@color/lightblue"/>
+    android:background="@drawable/style_roundcorners_ligtblue"
+        />
     </ScrollView>
 </LinearLayout>
         <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
 <com.google.android.flexbox.FlexboxLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -95,6 +107,8 @@
     android:orientation="horizontal"
     app:flexDirection="row"
     app:justifyContent="space_between"
+    app:alignContent="space_between"
+    app:alignItems="stretch"
     app:flexWrap="wrap">
 
 </com.google.android.flexbox.FlexboxLayout>

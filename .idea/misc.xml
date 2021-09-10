@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/button_darkblue_pressed_bluegray.xml" value="0.1824074074074074" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/button_white_pressed_lightblue.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_btn_stroke_darkblue.xml" value="0.1824074074074074" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_btn_stroke_pressed_bluegray.xml" value="0.1824074074074074" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_btn_stroke_pressed_ligtblue.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_btn_stroke_white.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_editView_corners_ligtblue.xml" value="0.1" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_choosetext.xml" value="0.15579710144927536" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_main.xml" value="0.152" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_main_ex.xml" value="0.1" />

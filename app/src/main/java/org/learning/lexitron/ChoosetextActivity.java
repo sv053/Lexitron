@@ -1,5 +1,7 @@
 package org.learning.lexitron;
 
+import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -43,7 +45,7 @@ public class ChoosetextActivity extends AppCompatActivity {
         layout = (FlexboxLayout) findViewById(R.id.btnLayout);
         dictResult = (TextView) findViewById(R.id.dataFromDict);
 
-        TextView choosenTextView = (TextView) findViewById(R.id.loadSavedTextTv);
+     //   TextView choosenTextView = (TextView) findViewById(R.id.loadSavedTextTv);
         //  final TextView textView = (TextView) findViewById(R.id.textView);
         Button chooseTextBtn = (Button) findViewById(R.id.saveTextBtn);
         chooseTextBtn.setOnClickListener(new View.OnClickListener() {
@@ -58,13 +60,10 @@ public class ChoosetextActivity extends AppCompatActivity {
         EditText userInputEt = (EditText) findViewById(R.id.inputText);
         userInputEt.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {}
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                // chooseTextBtn.setVisibility(View.VISIBLE);
                 chooseTextBtn.setEnabled(true);
             }
 
@@ -81,7 +80,7 @@ public class ChoosetextActivity extends AppCompatActivity {
                         try {
                             fw.WriteFile(writtenText);
 //            textView.append(loadText("C:\\Users\\admin\\AndroidStudioProjects\\Lexitron\\words.txt").toString());
-                            choosenTextView.setText(loadText("failik.txt").toString());
+                        //    choosenTextView.setText(loadText("failik.txt").toString());
 
                             Arrays.stream(writtenText.split(" ")).forEach(t-> addButton(t));
                         } catch (IOException e) {
@@ -92,68 +91,68 @@ public class ChoosetextActivity extends AppCompatActivity {
             }
         });
 
-        try {
+    //    try {
 //            textView.append(loadText("C:\\Users\\admin\\AndroidStudioProjects\\Lexitron\\words.txt").toString());
-            choosenTextView.append(loadText("failik.txt").toString());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+          //  choosenTextView.append(loadText("failik.txt").toString());
+  //      } catch (IOException e) {
+   //         e.printStackTrace();
+   //     }
 //-------------------load from dict
         TextView contentView = (TextView) findViewById(R.id.dataFromDict);
 //        WebView webView = (WebView) findViewById(R.id.webView);
 //        webView.getSettings().setJavaScriptEnabled(true);
-        Button btnFetch = (Button)findViewById(R.id.loadFromDictBtn);
-        EditText editText = (EditText) findViewById(R.id.quieryEt);
-        editText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                btnFetch.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-//                        dictResult.setText("Загрузка...");
-//                        new Thread(new Runnable() {
-//                            public void run() {
-//                                try {
-//                                    String content = getContent("https://dle.rae.es/", editText.getText().toString().trim());
-//                                    String cleanString = content.substring(content.indexOf("description"));
-//                                    content = cleanString.substring(cleanString.indexOf("1"), cleanString.indexOf(".\">"));
-//                                    String finalContent = content;
-//                                    dictResult.post(new Runnable() {
-//                                        public void run() {
-//                                            dictResult.setText(finalContent);
-//                                        }
-//                                    });
-//                                } catch (IOException ex) {
-//                                    dictResult.post(new Runnable() {
-//                                        public void run() {
-//                                            dictResult.setText("Ошибка: " + ex.getMessage());
-//                                            Toast.makeText(getApplicationContext(), "Ошибка", Toast.LENGTH_SHORT).show();
-//                                        }
-//                                    });
-//                                }
-//                                catch (Exception ex){
-//                                    dictResult.post(new Runnable() {
-//                                        public void run() {
-//                                            dictResult.setText("Ошибка: " + ex.getMessage());
-//                                            Toast.makeText(getApplicationContext(), "Ошибка", Toast.LENGTH_SHORT).show();
-//                                        }
-//                                    });
-//                                }
-//                            }
-//                        }).start();
-                    }
-                });
-            }
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
+//        Button btnFetch = (Button)findViewById(R.id.loadFromDictBtn);
+//    //    EditText editText = (EditText) findViewById(R.id.quieryEt);
+//        editText.addTextChangedListener(new TextWatcher() {
+//            @Override
+//            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+//                btnFetch.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+////                        dictResult.setText("Загрузка...");
+////                        new Thread(new Runnable() {
+////                            public void run() {
+////                                try {
+////                                    String content = getContent("https://dle.rae.es/", editText.getText().toString().trim());
+////                                    String cleanString = content.substring(content.indexOf("description"));
+////                                    content = cleanString.substring(cleanString.indexOf("1"), cleanString.indexOf(".\">"));
+////                                    String finalContent = content;
+////                                    dictResult.post(new Runnable() {
+////                                        public void run() {
+////                                            dictResult.setText(finalContent);
+////                                        }
+////                                    });
+////                                } catch (IOException ex) {
+////                                    dictResult.post(new Runnable() {
+////                                        public void run() {
+////                                            dictResult.setText("Ошибка: " + ex.getMessage());
+////                                            Toast.makeText(getApplicationContext(), "Ошибка", Toast.LENGTH_SHORT).show();
+////                                        }
+////                                    });
+////                                }
+////                                catch (Exception ex){
+////                                    dictResult.post(new Runnable() {
+////                                        public void run() {
+////                                            dictResult.setText("Ошибка: " + ex.getMessage());
+////                                            Toast.makeText(getApplicationContext(), "Ошибка", Toast.LENGTH_SHORT).show();
+////                                        }
+////                                    });
+////                                }
+////                            }
+////                        }).start();
+//                    }
+//                });
+//            }
+//            @Override
+//            public void afterTextChanged(Editable editable) {
+//
+//            }
+//        });
     }
 
     public void addButton(String s) {
@@ -161,7 +160,8 @@ public class ChoosetextActivity extends AppCompatActivity {
         Button button = new Button(this);  // создаём новый Button
         button.setId(buttonList.size());  //  Устанавливаем id (индекс в списке)
         button.setText(s);
-        button.setBackgroundResource(R.drawable.button_darkblue_pressed_bluegray);
+        button.setPadding(5,0,5,0);
+        button.setBackgroundResource(R.drawable.button_white_pressed_lightblue);
         button.setOnClickListener(new View.OnClickListener() {  // Устанавливаем слушателя
             @Override
             public void onClick(View v) {
