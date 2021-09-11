@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ChoosetextActivity.class);
+                intent.putExtra("fy","re");
                 startActivity(intent);
             }
         });
@@ -156,8 +157,8 @@ public class MainActivity extends AppCompatActivity {
 //
 //        //-------------loaded from dict
 
-        final TextView textView = (TextView) findViewById(R.id.textView);
-        Button findBtn = (Button) findViewById(R.id.findUserBtn);
+//        final TextView textView = (TextView) findViewById(R.id.textView);
+//        Button findBtn = (Button) findViewById(R.id.findUserBtn);
    //     EditText userLoginInput = (EditText) findViewById(R.id.loginInput);
 
 //        FileWriter fw = new FileWriter(MainActivity.this);

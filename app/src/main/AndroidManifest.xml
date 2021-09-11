@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lexitron">
         <activity
+            android:name=".SettaskActivity"
+            android:exported="true" />
+        <activity
             android:name=".ChoosetextActivity"
             android:exported="true" />
         <activity
@@ -24,7 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
