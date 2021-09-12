@@ -6,55 +6,80 @@
     android:layout_height="match_parent"
     tools:context=".SettaskActivity">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
+        <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="@string/advice1" />
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            >
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
-                android:id="@+id/dataFromDict"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/style_roundcorners_ligtblue"
-                android:padding="10dp"
+                android:layout_margin="10dp"
+                android:text="@string/advice1" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+                <TextView
+                    android:id="@+id/dataFromDict"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/style_roundcorners_ligtblue"
+                    android:hint="чтобы увидеть перевод слова, нужно его выбрать в списке ниже"
+                    android:maxHeight="150dp"
+                    android:padding="10dp"
+                    android:textAlignment="center" />
+            </ScrollView>
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/btnLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:alignContent="space_between"
+                    app:alignItems="stretch"
+                    app:flexDirection="row"
+                    app:flexWrap="wrap"
+                    app:justifyContent="space_between">
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_darkblue_pressed_bluegray"
+                android:text="сформировать задания"
+                android:textColor="@color/white"
                 android:textAlignment="center"
-
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/makeTasksBtn"
                 />
-        </ScrollView>
-
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp">
-
-            <com.google.android.flexbox.FlexboxLayout
-                android:id="@+id/btnLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:alignContent="space_between"
-                app:alignItems="stretch"
-                app:flexDirection="row"
-                app:flexWrap="wrap"
-                app:justifyContent="space_between">
-
-            </com.google.android.flexbox.FlexboxLayout>
-        </ScrollView>
-    </androidx.appcompat.widget.LinearLayoutCompat>
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </ScrollView>
 </RelativeLayout>

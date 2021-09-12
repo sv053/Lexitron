@@ -1,8 +1,11 @@
 package org.learning.lexitron.fileservice;
 
 import android.content.Context;
+import android.os.Environment;
+import android.util.Log;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -13,22 +16,21 @@ public class FileReader {
 
     private String FILEPATH;
     private Context context;
+    private FileCred filename;
 
 
     public FileReader(Context context, String filepath) {
         this.context = context;
         this.FILEPATH = filepath;
+        filename = new FileCred(filepath);
     }
 
     public List<String> ReadFile() throws IOException {
 
         String str = "";
-        try {
-            // открываем поток для чтения
-            BufferedReader br = new BufferedReader(new InputStreamReader(context.openFileInput(FILEPATH)));
-            // читаем содержимое
+        try(BufferedReader br = new BufferedReader(new InputStreamReader(context.openFileInput(FILEPATH)))) {
             str = br.readLine();
-
+                Log.d(context.getPackageName(),"The file " + FILEPATH + " has been read!");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             str = e.toString();
@@ -36,10 +38,19 @@ public class FileReader {
             e.printStackTrace();
             str = e.toString();
         }
-//    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-//    BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+//        String fileName = "stored_image.jpg";
+//        String baseDir = Environment.getExternalStorageDirectory().getAbsolutePath();
+//        String pathDir = baseDir + "/Android/data/com.mypackage.myapplication/";
 //
-// //   int n = Integer.parseInt(bufferedReader.readLine().trim());
+//        File f = new File(pathDir + File.separator + fileName);
+//
+//        if(f.exists()){
+//            Log.d("Application", "The file " + f.getName() + " exists!";
+//        }else{
+//            Log.d("Application", "The file no longer exists!";
+//        }
+
 //
 //    List<String> ar = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
 //            .map(Integer::parseInt)

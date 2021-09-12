@@ -67,29 +67,29 @@
                 android:text="загрузить" />
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/lightblue1">
-            <EditText
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:id="@+id/quieryEt1"
-                android:hint="search word..."/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="load"
-                android:id="@+id/loadFromDictBtn1"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tf"/>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:background="@color/lightblue1">-->
+<!--            <EditText-->
+<!--                android:layout_width="250dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:id="@+id/quieryEt1"-->
+<!--                android:hint="search word..."/>-->
+<!--            <Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_margin="5dp"-->
+<!--                android:text="load"-->
+<!--                android:id="@+id/loadFromDictBtn1"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/tf"/>-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
 </LinearLayout>
 

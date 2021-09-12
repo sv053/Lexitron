@@ -2,6 +2,7 @@ package org.learning.lexitron;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -43,6 +44,15 @@ public class SettaskActivity extends AppCompatActivity {
         //    String savedText = loadText("failik.txt");
 
         Arrays.stream(loadedText.split(" ")).forEach(t-> addButton(t));
+
+        Button makeTasksBtn = (Button) findViewById(R.id.makeTasksBtn);
+        makeTasksBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(this, MakeTaskActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private  String loadText(String filepath) throws IOException {
@@ -57,22 +67,19 @@ public class SettaskActivity extends AppCompatActivity {
 
     public void addButton(String s) {
 
-
-        Button button = new Button(this);  // создаём новый Button
-        button.setId(buttonList.size());  //  Устанавливаем id (индекс в списке)
+        Button button = new Button(this);
+        button.setId(buttonList.size());
         button.setText(s);
         button.setPadding(10,0,10,0);
         button.setBackgroundResource(R.drawable.button_white_pressed_lightblue);
-        button.setOnClickListener(new View.OnClickListener() {  // Устанавливаем слушателя
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int position = v.getId();  //  Получаем id (индекс в списке)
-                Button button = buttonList.get(position);  //  Получаем кнопку
-                //   button.setText("Нажата кнопка №" + (position + 1));  // Как-нибудь это обрабатываем
-
-                //translate
+                int position = v.getId();
+                Button button = buttonList.get(position);
                 String wordToTranslate = button.getText().toString();
                 final String[] translation = {""};
+
                 button.post(new Runnable() {
                     @Override
                     public void run() {
@@ -80,19 +87,16 @@ public class SettaskActivity extends AppCompatActivity {
                     }
                 });
 
-                //translate ends
-             //   translateField.setText(translation);
                 if(!dictionary.keySet().contains(wordToTranslate)){
                     dictionary.put(wordToTranslate, translation[0]);
                     button.setBackgroundResource(R.drawable.style_btn_stroke_pressed_ligtblue);
 
                 }
                 else {
-                    dictionary.remove(button.getText(),wordToTranslate);
+                    dictionary.remove(wordToTranslate,translation[0]);
                     button.setBackgroundResource(R.drawable.style_btn_stroke_white);
 
                 }
-
             }
         });
         buttonList.add(button);  //  Добавляем в список
@@ -100,7 +104,7 @@ public class SettaskActivity extends AppCompatActivity {
     }
 
     private String getContent(String path, String query) throws IOException {
-//
+
         HTTPReader httpReader = new HTTPReader(path);
         return httpReader.Read(path, query);
 
@@ -110,14 +114,13 @@ public class SettaskActivity extends AppCompatActivity {
         dictResult.setText("Загрузка...");
         final Handler myHandler = new Handler();
         final String[] translatedText = {""};
-    //    Thread red = new Thread();
-//       red.setName("redi");
+
        new Thread(new Runnable() {
             public void run() {
                 try {
                     String content = getContent("https://dle.rae.es/", word);
                     String cleanString = content.substring(content.indexOf("description"));
-                    content = cleanString.substring(cleanString.indexOf("1"), cleanString.indexOf(".\">"));
+                    content = cleanString.substring(cleanString.indexOf("1"), cleanString.indexOf("\">"));
                     translatedText[0] = content;
                     dictResult.post(new Runnable() {
                         public void run() {

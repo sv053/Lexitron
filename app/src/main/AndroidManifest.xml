@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lexitron">
         <activity
+            android:name=".MakeTaskActivity"
+            android:exported="true" />
+        <activity
             android:name=".SettaskActivity"
             android:exported="true" />
         <activity
