@@ -4,5 +4,7 @@
     <string name="apply">find</string>
     <string name="showAll">показать всех</string>
     <string name="choosetext">выбрать текст</string>
-    <string name="advice1">Отметьте все слова, с которыми будут составлены задания. Для эффективности задания должны работать не более чем с половиной слов.</string>
+    <string name="advice1">Отметьте все слова, с которыми будут составлены задания.
+        Для эффективности задания должны работать не более чем с половиной слов.</string>
+    <string name="goNext">To next page</string>
 </resources>

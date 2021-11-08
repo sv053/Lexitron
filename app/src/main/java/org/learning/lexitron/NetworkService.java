@@ -36,6 +36,10 @@ public class NetworkService {
         return mRetrofit.create(UsersApiService.class);
     }
 
+    public SuffixApiService getSufJSONApi() {
+        return mRetrofit.create(SuffixApiService.class);
+    }
+
     public TextsApiService getTextsJSONApi() {
         return mRetrofit.create(TextsApiService.class);
     }

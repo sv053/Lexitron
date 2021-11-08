@@ -23,9 +23,6 @@ public class ChoosetextActivity extends AppCompatActivity {
 //    private List<Button> buttonList = new ArrayList<Button>();
 //    private FlexboxLayout layout;
     private TextView dictResult;
-//    private Map<String,String> dictionary;
-
- //   private static int btnId = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

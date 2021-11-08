@@ -49,7 +49,7 @@ public class SettaskActivity extends AppCompatActivity {
         makeTasksBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(this, MakeTaskActivity.class);
+                Intent intent = new Intent(view.getContext(), MakeTaskActivity.class);
                 startActivity(intent);
             }
         });

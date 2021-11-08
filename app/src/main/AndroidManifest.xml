@@ -20,7 +20,9 @@
             android:exported="true" />
         <activity
             android:name=".ChoosetextActivity"
-            android:exported="true" />
+            android:exported="true" >
+
+        </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
