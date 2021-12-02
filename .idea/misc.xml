@@ -3,12 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/button_darkblue_pressed_bluegray.xml" value="0.11216216216216217" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/button_white_pressed_lightblue.xml" value="0.11216216216216217" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_btn_stroke_darkblue.xml" value="0.15315315315315314" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_btn_stroke_pressed_bluegray.xml" value="0.11216216216216217" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_btn_stroke_pressed_ligtblue.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_roundcorners_ligtblue.xml" value="0.15315315315315314" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/drawable/style_roundcorners_transparent.xml" value="0.15315315315315314" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_choosetext.xml" value="0.16" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_main1.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_main_ex.xml" value="0.1" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_make_task.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/Lexitron/app/src/main/res/layout/activity_settask.xml" value="0.264" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>

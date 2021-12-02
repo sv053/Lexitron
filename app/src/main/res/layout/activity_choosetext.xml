@@ -1,98 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ChoosetextActivity">
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <!--        <WebView-->
+    <!--            android:layout_width="250dp"-->
+    <!--            android:layout_height="150dp"-->
+    <!--            android:id="@+id/webView"/>-->
+
+
+    <EditText
+        android:id="@+id/inputText"
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/style_roundcorners_ligtblue"
+        android:hint="скопируйте текст в это окно"
+        android:ellipsize="start"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/saveTextBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/saveTextBtn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/mainLayout"
-        android:layout_margin="12dp">
-
-        <!--        <WebView-->
-        <!--            android:layout_width="250dp"-->
-        <!--            android:layout_height="150dp"-->
-        <!--            android:id="@+id/webView"/>-->
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_marginBottom="4dp">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:id="@+id/inputText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/style_roundcorners_ligtblue"
-            android:hint="скопируйте текст в это окно"
-            android:padding="10dp"
-            />
-    </ScrollView>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp">
-<!--            <TextView-->
-<!--                android:layout_width="190dp"-->
-<!--                android:layout_height="30dp"-->
-<!--                android:id="@+id/loadSavedTextTv"-->
-<!--                android:background="@color/lightblue1"-->
-<!--                android:textIsSelectable="true"-->
-<!--                android:hint="сохранённый файл"-->
-<!--                android:layout_margin="10dp"-->
-<!--                />-->
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/saveTextBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
-                android:background="@drawable/button_darkblue_pressed_bluegray"
-                android:enabled="false"
-                android:textAlignment="center"
-                android:textColor="@color/white"
-                android:text="загрузить" />
+        android:layout_marginBottom="31dp"
+        android:background="@drawable/button_darkblue_pressed_bluegray"
+        android:enabled="false"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/choosewords"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputText" />
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@color/lightblue1">
-            <EditText
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_margin="5dp"
-                android:id="@+id/quieryEt1"
-                android:hint="search word..."/>
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="load"
-                android:id="@+id/loadFromDictBtn1"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/tf"/>
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:background="@color/lightblue1">-->
+    <!--            <EditText-->
+    <!--                android:layout_width="250dp"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:id="@+id/quieryEt1"-->
+    <!--                android:hint="search word..."/>-->
+    <!--            <Button-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:text="load"-->
+    <!--                android:id="@+id/loadFromDictBtn1"/>-->
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:id="@+id/tf"/>-->
 
-        </LinearLayout>
-        </LinearLayout>
-</LinearLayout>
-
-    </LinearLayout>
-</ScrollView>
-</RelativeLayout>
+    <!--        </LinearLayout>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

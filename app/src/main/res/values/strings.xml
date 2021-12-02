@@ -3,8 +3,14 @@
     <string name="input_words">login</string>
     <string name="apply">find</string>
     <string name="showAll">показать всех</string>
+    <string name="loadlink">загрузить по ссылке</string>
+    <string name="choosefile">выбрать файл</string>
+    <string name="loadtext">скопировать текст</string>
     <string name="choosetext">выбрать текст</string>
-    <string name="advice1">Отметьте все слова, с которыми будут составлены задания.
-        Для эффективности задания должны работать не более чем с половиной слов.</string>
-    <string name="goNext">To next page</string>
+    <string name="choosewords">выбрать слова</string>
+    <string name="tip1">Отметьте все слова, с которыми будут составлены задания.
+        </string>
+    <string name="tip2">Чтобы увидеть перевод слова, нужно его выбрать в списке ниже</string>
+    <string name="goNext">Перейти</string>
+    <string name="choose_tasks">выбрать задания</string>
 </resources>

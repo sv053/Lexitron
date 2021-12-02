@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SettaskActivity">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <ScrollView-->
+<!--        android:id="@+id/scrollView2"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
@@ -17,69 +22,52 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="@string/advice1" />
+                android:ellipsize="start"
+                android:gravity="center_horizontal"
+                android:text="@string/tip1" />
+
+            <!--            <ScrollView-->
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
 
             <ScrollView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="500dp">
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/btnLayout"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:orientation="horizontal"
+                app:alignContent="space_between"
+                app:alignItems="stretch"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="space_between">
 
-                >
-
-                <TextView
-                    android:id="@+id/dataFromDict"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/style_roundcorners_ligtblue"
-                    android:hint="чтобы увидеть перевод слова, нужно его выбрать в списке ниже"
-                    android:maxHeight="150dp"
-                    android:padding="10dp"
-                    android:textAlignment="center" />
+            </com.google.android.flexbox.FlexboxLayout>
             </ScrollView>
-
-            <ScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="10dp">
-
-                <com.google.android.flexbox.FlexboxLayout
-                    android:id="@+id/btnLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    app:alignContent="space_between"
-                    app:alignItems="stretch"
-                    app:flexDirection="row"
-                    app:flexWrap="wrap"
-                    app:justifyContent="space_between">
-
-                </com.google.android.flexbox.FlexboxLayout>
+            <!--            </ScrollView>-->
 
 
-            </ScrollView>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center">
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/makeTasksBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_darkblue_pressed_bluegray"
-                android:text="сформировать задания"
-                android:textColor="@color/white"
-                android:textAlignment="center"
-                android:paddingRight="10dp"
                 android:paddingLeft="10dp"
-                android:id="@+id/makeTasksBtn"
-                />
-            </LinearLayout>
+                android:paddingRight="10dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/choose_tasks"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
         </androidx.appcompat.widget.LinearLayoutCompat>
-    </ScrollView>
-</RelativeLayout>
+<!--    </ScrollView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

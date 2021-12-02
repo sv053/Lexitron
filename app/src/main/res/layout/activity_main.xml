@@ -1,54 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightblue1"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/imageView5"
+        android:layout_width="187dp"
+        android:layout_height="177dp"
+        android:layout_margin="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="34dp"
+        app:cardCornerRadius="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+
+            android:layout_width="358dp"
+            android:layout_height="226dp"
+            android:layout_margin="0dp"
+            android:layout_marginBottom="68dp"
+            android:background="@drawable/style_roundcorners_transparent"
+            android:padding="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/imageView7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/dep" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="365dp"
+        android:text="no way!"
+        app:fontFamily="sans-serif"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gonext" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gonext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="264dp"
+        android:background="@drawable/style_btn_stroke_darkblue"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/choosetext"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.398"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="87dp"
+        android:gravity="center"
         android:orientation="vertical"
-        >
+        app:layout_constraintBottom_toTopOf="@+id/gonext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="no way!"/>
-
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/gonext"
-    android:layout_gravity="center"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:textColor="@color/white"
-    android:text="@string/goNext"
-    />
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:gravity="center">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/findUserBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/showAll"
-                android:layout_gravity="bottom"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:textColor="@color/white"
-                android:gravity="center"
-                android:background="@drawable/button_darkblue_pressed_bluegray"/>
     </LinearLayout>
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/allUsersListView"/>
-    </LinearLayout>
-</RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -40,7 +40,7 @@ public class SetTasksOptionstActivity extends AppCompatActivity {
         setContentView(R.layout.activity_choosetext);
 
         layout = (FlexboxLayout) findViewById(R.id.btnLayout);
-        dictResult = (TextView) findViewById(R.id.dataFromDict);
+    //    dictResult = (TextView) findViewById(R.id.dataFromDict);
         dictionary = new HashMap<>();
 
         Button chooseTextBtn = (Button) findViewById(R.id.saveTextBtn);
@@ -95,7 +95,7 @@ public class SetTasksOptionstActivity extends AppCompatActivity {
    //         e.printStackTrace();
    //     }
 //-------------------load from dict
-        TextView contentView = (TextView) findViewById(R.id.dataFromDict);
+     //   TextView contentView = (TextView) findViewById(R.id.dataFromDict);
 //        WebView webView = (WebView) findViewById(R.id.webView);
 //        webView.getSettings().setJavaScriptEnabled(true);
 //        Button btnFetch = (Button)findViewById(R.id.loadFromDictBtn);
